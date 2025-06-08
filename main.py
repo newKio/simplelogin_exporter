@@ -7,8 +7,6 @@ simple_login_api_key = os.getenv("SIMPLE_LOGIN_API_KEY")
 aliases = []  # Initialise an empty list to store aliases
 
 def main():
-    disabled = 0
-
     for page in range(0, 100):  # Adjust the range as needed for pagination, made 100 pages to be sure to get all aliases, prob wont have 100 pages of aliases
         url = f"https://app.simplelogin.io/api/v2/aliases?page_id={page}"
         headers = { "Authentication": simple_login_api_key}
